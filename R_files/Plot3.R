@@ -10,8 +10,6 @@ if(!exists("NEI")){
 if(!exists("SCC")){
     SCC <- readRDS("Source_Classification_Code.rds")
 }
-
- 
 MD  <- NEI[NEI$fips=="24510", ]
  
 
