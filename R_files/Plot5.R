@@ -22,7 +22,6 @@ motorsource  <- grepl("on-road", mergeddata$type, ignore.case=TRUE)
 subsetNEISCC <- mergeddata[motorsource, ]
 
 total <- aggregate(Emissions ~ year, subsetNEISCC, sum)
-
 png("plot5.png")
 g <- ggplot(total, aes(factor(year), Emissions))
 g <- g + geom_bar(stat="identity") +
