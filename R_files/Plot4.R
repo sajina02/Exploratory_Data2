@@ -15,7 +15,6 @@ if(!exists("NEISCC")){
     mergeddata <- merge(NEI, SCC, by="SCC")
 }
 
- 
 coalsource  <- grepl("coal", mergeddata$Short.Name, ignore.case=TRUE)
 subsetNEISCC <- mergeddata[coalsource, ]
 
