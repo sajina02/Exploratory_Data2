@@ -11,7 +11,6 @@ if(!exists("SCC")){
     SCC <- readRDS("Source_Classification_Code.rds")
 }
 library(ggplot2)
-
 subsetNEI <- NEI[(NEI$fips=="24510"|NEI$fips=="06037") & NEI$type=="ON-ROAD",  ]
 
 aggregatedData <- aggregate(Emissions ~ year + fips, subsetNEI, sum)
