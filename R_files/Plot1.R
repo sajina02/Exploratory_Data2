@@ -11,7 +11,6 @@ if(!exists("SCC")){
 SCC <- readRDS("Source_Classification_Code.rds")
 }
 
- 
 #Group by year and sum
 totalEmmisions <- aggregate(NEI[, 'Emissions'], by=list(NEI$year), FUN=sum)
 #round up data from Pm
