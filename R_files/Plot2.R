@@ -8,7 +8,6 @@ if(!exists("NEI")){
 if(!exists("SCC")){
     SCC <- readRDS("Source_Classification_Code.rds")
 }
-
 MD <- subset(NEI, fips=='24510')
 #Group by year and sum
 totalMDEmmisions <- aggregate(MD[, 'Emissions'], by=list(MD$year), FUN=sum)
